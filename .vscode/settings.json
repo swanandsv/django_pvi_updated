@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/16a6f22c-735c-4ac7-bcbe-748ef1a6f85d/microsoft.web/sites/subscriptions/16a6f22c-735c-4ac7-bcbe-748ef1a6f85d/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/pvi-score",
+    "appService.deploySubpath": "."
+}
