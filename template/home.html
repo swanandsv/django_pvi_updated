@@ -1,53 +1,119 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style> 
+        .navbar{ background:#F97300;}
+
+        .nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+
+        .nav-link{ margin-right: 1em !important;}
+
+        .nav-link:hover{ background: #f4f4f4; color: #f97300; }
+
+        .navbar-collapse{ justify-content: flex-end;}
+
+        .navbar-toggler{  background:#fff !important;}
+        .navbar-collapse{
+        justify-content: flex-end;
+        }
+        .bg-dark{
+background-color:#343a40!important
+}
+.bg-primary{
+background-color:#007bff!important
+}
+.header{
+ background-image: url('../images/headerback.jpg');
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+.overlay{
+ position: absolute;
+ min-height: 100%;
+ min-width: 100%;
+ left: 0;
+ top: 0;
+ background: rgba(244, 244, 244, 0.79);
+}
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
     
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <style>
-    .iframe {
+}
+.description h1{
+ color:#F97300 ;
+}
+.description p{
+ color:#666;
+ font-size: 20px;
+ width: 50%;
+ line-height: 1.5;
+}
+.description button{
+ border:1px  solid #F97300;
+ background:#F97300;
+ color:#fff;
+}
+.iframe {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 400px;
+    width: 300px;
     height: 200px;
     z-index: 999;
   }
-    </style>
+        
+        
+        </style>
+   </head>
+   <body>
   
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href= "/adminlogin">ADMIN LOGIN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href= "/userlogin">LOGIN</a>
-            </li>
-            
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <iframe class="iframe" src='https://webchat.botframework.com/embed/convdjangobot?s=1Inwl3RQLhM.RLNl5jcyGiGBXfIIDQ5j6EhCG6UjfsbVkhsBy-2xZeI' 
+
+     <!-- navbar -->  
+ <nav class="navbar navbar-expand-lg fixed-top ">  
+    <a class="navbar-brand" href="#">Home</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+    <li class="nav-item">
+        <a class="nav-link" data-value="about" href="/adminlogin">ADMIN LOGIN</a>        </li>  
+   <li class="nav-item">
+       <a class="nav-link " data-value="portfolio"href="/userlogin">LOGIN</a>    
+    </li>
+    <li class="nav-item"> 
+       <a class="nav-link " data-value="blog" href="#">Blog</a>         </li>   
+   <li class="nav-item">  
+      <a class="nav-link " data-value="team" href="#">         Team</a>       </li>  
+   <li class="nav-item"> 
+    <a class="nav-link " data-value="contact" href="#">Contact</a>       </li> 
+   </ul> 
+   </div></nav>
+   <header class="header">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="description ">
+            <h1>    Hello ,Welcome To PVI Results 
+             <p>    Please proceed to the Login.
+         </p>   
+          <button class="btn btn-outline-secondary btn-lg">See more</button>   </h1>  
+         </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+     $('.header').height($(window).height());
      
+    })
     
-    </iframe>
+       </script>
+    </header>
+    <iframe class="iframe" src='https://webchat.botframework.com/embed/convdjangobot?s=1Inwl3RQLhM.RLNl5jcyGiGBXfIIDQ5j6EhCG6UjfsbVkhsBy-2xZeI'></iframe>
     <script>
 
       var xhr = new XMLHttpRequest();
@@ -64,6 +130,7 @@
       }
   
     </script>
-  
-  </body>
+
+
+   </body>
 </html>
